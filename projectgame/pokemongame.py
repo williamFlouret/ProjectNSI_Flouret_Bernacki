@@ -58,6 +58,9 @@ barheight = int((17/100)*(9/100)*screenheight)
 barwidthOG = int((783/1000)*(33/100)*screenwidth)
 
 
+Xennemy = (78/100)*screenwidth
+Xallie =  (20/100)*screenwidth
+
 
 #pikachu ennemi animé
 class Pikachu(pygame.sprite.Sprite):
@@ -130,13 +133,21 @@ class Pikachu(pygame.sprite.Sprite):
 
 
         self.rect = self.image.get_rect()
-        self.rect.center = ((78/100)*screenwidth, (25/100)*screenheight)
+        self.rect.center = (Xennemy, (25/100)*screenheight)
 
     def update(self):
         self.current_sprite += 0.4
 
         if self.current_sprite >= len(self.sprites):
             self.current_sprite = 0
+            
+        global Xennemy
+        
+        if deathennemy:
+            Xennemy += 10
+            self.rect.center = (Xennemy, (25/100)*screenheight)
+            
+
 
         self.image = self.sprites[int(self.current_sprite)]
 
@@ -191,6 +202,13 @@ class Feuillausaure(pygame.sprite.Sprite):
 
         if self.current_sprite >= len(self.sprites):
             self.current_sprite = 0
+            
+        global Xallie
+        
+        if deathallie:
+            Xallie -= 10
+            self.rect.center = (Xallie, (50/100)*screenheight)
+           
 
         self.image = self.sprites[int(self.current_sprite)]
 
@@ -285,6 +303,9 @@ yourturn = True
 attack = False
 current_tour = 0
 
+deathennemy = False
+deathallie = False
+
 policearial = pygame.font.SysFont("Arial", 35, 1, 1)
 texttour = policearial.render("A vous de jouer.", 1, white)
 texttour2 = policearial.render("Tour ennemi.", 1, white)
@@ -320,7 +341,7 @@ while running:
                     #barwidth2 -= attackValue
                     attack = True
                     if barwidth2 > 0:
-                        attackValue = random.randint(10, 80)
+                        attackValue = random.randint(20, 80)
                     
                         if barwidth2 <= int((65/100)*barwidthOG):
                             colorHPbar2 = yellow
@@ -331,14 +352,25 @@ while running:
                         if attackValue >= barwidth2:
                             attackValue = barwidth2
                             barwidth2 -= attackValue
+                            deathennemy = True
                         else:
                             barwidth2 -= attackValue
                             
-                    
+    if Xennemy >= screenwidth+100:
+        deathennemy = False
+        all_sprites.remove(pikachu)
+        
+    if Xallie <= -150:
+        deathallie = False
+        all_sprites.remove(feuillausaure)
+                            
+
+    
+    
 
 
-
-
+    #•if deathennemy:
+        #Xennemy += 100
 
     #on appelle les fonctions pour afficher un objet
     #screen.fill(white)
@@ -350,7 +382,7 @@ while running:
 
 
 
-    if attack:
+    if attack == True and deathennemy == False:
         Tour2()
         current_tour += 0.1
         #print (current_tour)
@@ -366,6 +398,7 @@ while running:
             if attackValue >= barwidth:
                 attackValue = barwidth
                 barwidth -= attackValue
+                deathallie = True
             else:
                 barwidth -= attackValue
             
@@ -386,7 +419,7 @@ while running:
 
     #if barwidth2 < 0:
         #attackValue = 0
-        #print ('pikachu fainted')
+        #print ('pikachu ennemi K.O')
 
 
 
