@@ -148,7 +148,6 @@ class Pikachu(pygame.sprite.Sprite):
             self.rect.center = (Xennemy, (25/100)*screenheight)
             
 
-
         self.image = self.sprites[int(self.current_sprite)]
 
 
@@ -256,6 +255,12 @@ def button1():
 
 def button1v2():
     screen.blit(button1v2Img, (button1v2X, button1v2Y))
+    
+def B2button1():
+    screen.blit(B2button1Img, (B2buttonX, B2buttonY))
+    
+def B2button2():
+    screen.blit(B2button2Img, (B2buttonX, B2buttonY))
 
 def background1():
     screen.blit(background1Img, (background1X, background1Y))
@@ -267,34 +272,53 @@ def barrevie2():
     screen.blit(HPbar2, (HPbar2X, HPbar2Y))
 
 def Tour():
-    screen.blit(texttour, (int((30/100)*screenwidth), int((90/100)*screenheight)))
+    screen.blit(texttour, (int((50/100)*screenwidth), int((90/100)*screenheight)))
 
 def Tour2():
-    screen.blit(texttour2, (int((30/100)*screenwidth), int((90/100)*screenheight)))
+    screen.blit(texttour2, (int((50/100)*screenwidth), int((90/100)*screenheight)))
+
+def txtdeathallie():
+    screen.blit(textdeathallie, (int((50/100)*screenwidth), int((90/100)*screenheight)))
+    
+def txtdeathennemy():
+    screen.blit(textdeathennemy, (int((50/100)*screenwidth), int((90/100)*screenheight)))
+    
+def txtmiss():
+    screen.blit(textmiss, (int((50/100)*screenwidth), int((90/100)*screenheight)))
 
 
 
-
-
-#button1
+#1ebutton1
 button1Img = pygame.image.load('attack1.png')
-button1Img = pygame.transform.scale(button1Img, (int((20/100)*screenwidth), int((15/100)*screenheight)))
+button1Img = pygame.transform.scale(button1Img, (int((15/100)*screenwidth), int((10/100)*screenheight)))
 button1X = (1/100)*screenwidth
-button1Y = (84/100)*screenheight
+button1Y = (87/100)*screenheight
 
-widthB1 = int((27/100)*screenwidth)
-heightB1 = int((20/100)*screenheight)
+widthB = int((15/100)*screenwidth)
+heightB = int((10/100)*screenheight)
 click1=0
 
-#button1v2
+#1ebutton1v2
 button1v2Img = pygame.image.load('attack2.png')
-button1v2Img = pygame.transform.scale(button1v2Img, (int((20/100)*screenwidth), int((15/100)*screenheight)))
+button1v2Img = pygame.transform.scale(button1v2Img, (int((15/100)*screenwidth), int((10/100)*screenheight)))
 button1v2X = (1/100)*screenwidth
-button1v2Y = (84/100)*screenheight
+button1v2Y = (87/100)*screenheight
+
+#2ebutton1
+B2button1Img = pygame.image.load('2attack.png')
+B2button1Img = pygame.transform.scale(B2button1Img, (int((15/100)*screenwidth), int((10/100)*screenheight)))
+
+B2buttonX = (20/100)*screenwidth
+B2buttonY = (87/100)*screenheight
+
+#2ebutton2
+B2button2Img = pygame.image.load('2attack2.png')
+B2button2Img = pygame.transform.scale(B2button2Img, (int((15/100)*screenwidth), int((10/100)*screenheight)))
 
 
 
 attackValue = random.randint((10/100)*barwidthOG, (30/100)*barwidthOG)
+precision = random.randint(1, 3)
 
 timeCount = 0
 
@@ -305,10 +329,14 @@ current_tour = 0
 
 deathennemy = False
 deathallie = False
+miss = False
 
 policearial = pygame.font.SysFont("Arial", 35, 1, 1)
 texttour = policearial.render("A vous de jouer.", 1, white)
 texttour2 = policearial.render("Tour ennemi.", 1, white)
+textdeathallie = policearial.render("Votre pokemon est K.O!", 1, white)
+textdeathennemy = policearial.render("Pokemon ennemi est K.O!", 1, white)
+textmiss = policearial.render("Pokemon ennemi a esquivé l'attaque!", 1, white)
 
 
 
@@ -334,14 +362,16 @@ while running:
             sys.exit()
 
 
-        #si la souris est sur le button1
-        if attack == False:
-            if button1X <= mouse[0] <= button1X+widthB1 and button1Y <= mouse[1] <= button1Y+heightB1:
+        #si la souris est sur le button1 et clique
+        if attack == False and deathallie == False:
+            if button1X <= mouse[0] <= button1X+widthB and button1Y <= mouse[1] <= button1Y+heightB:
                 if click[0] == 1:
-                    #barwidth2 -= attackValue
+                    
+                    #defini les couleurs de la barre de vie en fonction de sa taille/valeur
                     attack = True
+                    miss = False
                     if barwidth2 > 0:
-                        attackValue = random.randint(20, 80)
+                        attackValue = random.randint((10/100)*barwidthOG, (20/100)*barwidthOG)
                     
                         if barwidth2 <= int((65/100)*barwidthOG):
                             colorHPbar2 = yellow
@@ -349,46 +379,86 @@ while running:
                         if barwidth2 <= int((35/100)*barwidthOG):
                             colorHPbar2 = red
                             
+                        #si il reste moins de vie que la valeur de l'attaque, on n'attaque de cette valeur restante, le pokemon meurt
                         if attackValue >= barwidth2:
                             attackValue = barwidth2
                             barwidth2 -= attackValue
                             deathennemy = True
+                            
+                        #sinon on attaque avec une valeur aleatoire
                         else:
                             barwidth2 -= attackValue
                             
+                            
+                            
+                            
+        #si la souris est sur le button2 et clique
+        if attack == False and deathallie == False:
+            if B2buttonX <= mouse[0] <= B2buttonX+widthB and B2buttonY <= mouse[1] <= B2buttonY+heightB:
+                if click[0] == 1:
+                    precision = random.randint(1, 3)
+
+                    print (precision)
+                    #defini les couleurs de la barre de vie en fonction de sa taille/valeur
+                    attack = True
+                    if precision > 1:
+                        miss = False
+                        if barwidth2 > 0:
+                            attackValue = random.randint((30/100)*barwidthOG, (30/100)*barwidthOG)
+                    
+                            if barwidth2 <= int((65/100)*barwidthOG):
+                                colorHPbar2 = yellow
+                            
+                            if barwidth2 <= int((35/100)*barwidthOG):
+                                colorHPbar2 = red
+                            
+                            #si il reste moins de vie que la valeur de l'attaque, on n'attaque de cette valeur restante, le pokemon meurt
+                            if attackValue >= barwidth2:
+                                attackValue = barwidth2
+                                barwidth2 -= attackValue
+                                deathennemy = True
+                            
+                            #sinon on attaque avec une valeur aleatoire
+                            else:
+                                barwidth2 -= attackValue
+                            
+                    else:
+                        miss = True
+                            
+                            
+                            
+    #on enleve le pokemon du screen lorsqu'il est mort et quitte l'ecran
     if Xennemy >= screenwidth+100:
-        deathennemy = False
         all_sprites.remove(pikachu)
         
     if Xallie <= -150:
-        deathallie = False
         all_sprites.remove(feuillausaure)
                             
 
     
     
 
-
-    #•if deathennemy:
-        #Xennemy += 100
-
     #on appelle les fonctions pour afficher un objet
-    #screen.fill(white)
     background1()
     button1()
     barrevie1()
     barrevie2()
-    #screen.blit(texttour, (500, 700))
+    B2button1()
+    
+    
 
 
-
+    #l'attaque de l'ennemi en retour
     if attack == True and deathennemy == False:
-        Tour2()
         current_tour += 0.1
-        #print (current_tour)
+        
+        if miss == True:
+            txtmiss()
+        else:
+            Tour2()
         
         if current_tour == 1.3 and barwidth > 0:
-            attackValue = random.randint(10, 80)
+            attackValue = random.randint((10/100)*barwidthOG, (20/100)*barwidthOG)
             if barwidth <= int((65/100)*barwidthOG):
                 colorHPbar = yellow
                             
@@ -399,27 +469,28 @@ while running:
                 attackValue = barwidth
                 barwidth -= attackValue
                 deathallie = True
+                
             else:
                 barwidth -= attackValue
             
         if attackValue >= barwidth2:
             attackValue = barwidth2
             
-        #if barwidth < 0:
-            #print ('pikachu fainted')
             
         if current_tour >= 3:
             attack = False
-
+    
+    elif deathennemy == True:
+        txtdeathennemy()
+        
+    elif deathallie == True:
+        txtdeathallie()
+        
     else:
         Tour()
         current_tour = 0
-
-
-
-    #if barwidth2 < 0:
-        #attackValue = 0
-        #print ('pikachu ennemi K.O')
+    
+    
 
 
 
@@ -432,9 +503,12 @@ while running:
 
 
     #si la souris passe sur le button1 alors il change de couleur
-    if button1X <= mouse[0] <= button1X+widthB1 and button1Y <= mouse[1] <= button1Y+heightB1:
+    if button1X <= mouse[0] <= button1X+widthB and button1Y <= mouse[1] <= button1Y+heightB:
         button1v2()
 
+    #si la souris passe sur le button2 alors il change de couleur
+    if B2buttonX <= mouse[0] <= B2buttonX+widthB and B2buttonY <= mouse[1] <= B2buttonY+heightB:
+        B2button2()
 
 
     #dessine la barre de vie
