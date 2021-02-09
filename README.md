@@ -4,7 +4,7 @@ MISE A JOUR: La version du projet le plus récente se trouve dans le dossier Pok
 
 
 
-Voici notre projet, il faut pygame, tous les png et les fichiers son (.wav) pour l'executer. Ne pouvant pas mettre plus de 100 fichiers dans un dossier github, les fichierts sont separés. Il faut aller chercher des images dans le fichier animation, et le reste est dans la version luc v recente. 
+Voici notre projet, il faut pygame, tous les png et les fichiers son (.wav) pour l'executer. Ne pouvant pas mettre plus de 100 fichiers dans un dossier github, les fichierts sont separés. Il faut aller chercher des images dans le fichier animation, et le reste est dans la version luc v recente. De meme, manque de place, il faut aller chercher les png nommés "tile-000", "tile-001" et ainsi de suite dans la version son et musique. Normalement il devrait tout y avoir une fois cela fait. Nous corrigerons ces defauts de place et de dossiers :)
 Le but final est d'avoir un jeu type pokemon en 2D, avec un personnage qui se deplace sur une carte et une interface de combat ou il peut affronter des creatures par un systeme de tour par tour.
 Pour le moment, nous n'avons qu'une interface de combat. Il y a un background et des sprites animés ainsi qu'une barre de vie modifiée au click d'un bouton (les sprites sont notres, dessinés par Luc l'artiste). Plusieurs attaques sont disponibles, chacune avec des caracteristiques differentes. Un prototype de sac pour recuperer des objets est en cours dans la version "VersionBonSac". Vous pouvez accedez a un trello pour voir notre avancement et plus de details.
 
