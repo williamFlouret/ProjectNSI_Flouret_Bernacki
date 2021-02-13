@@ -129,7 +129,7 @@ class POKEMON2(pygame.sprite.Sprite):
 
         if self.current_sprite >= len(self.sprites):
             self.current_sprite = 0
-        
+
         self.image = self.sprites[int(self.current_sprite)]
 
 
@@ -183,7 +183,7 @@ def credits():
 running = True
 while running:
 
-    
+
 
     background1()
     button1()
@@ -202,22 +202,22 @@ while running:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-       
+
 
         if button1X <= mouse[0] <= button1X+widthB and button1Y <= mouse[1] <= button1Y+heightB:
             if click[0] == 1:
                 import PokeGenesis23versionBonSac
 
-    
-    
-    
+
+
+
     if button1X <= mouse[0] <= button1X+widthB and button1Y <= mouse[1] <= button1Y+heightB:
         button1v2()
-    
-    
+
+
     pygame.display.update()
     clock.tick(20)
-                
+
 
 
 
