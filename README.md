@@ -5,13 +5,13 @@
 
 William:
 Code:
-Création système fondamental du jeu: système affichage, attaque et tours
-Création système des vies (fonctions et variables)
-Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)
-Création du système de tours (maitrise du temps sur pygame)
-Création du système des potions
-Création mouvement des pokemon lors des attaques
-Résolution de nombreux bugs
+-Création système fondamental du jeu: système affichage, attaque et tours
+-Création système des vies (fonctions et variables)
+-Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)
+-Création du système de tours (maitrise du temps sur pygame)
+-Création du système des potions
+-Création mouvement des pokemon lors des attaques
+-Résolution de nombreux bugs
 
 
 
@@ -20,32 +20,32 @@ Résolution de nombreux bugs
 Luc:
 
 Design:
-Design et Création des Pokemon
-Design et création des barres de vies
-Design et création de tous les boutons (versions survol aussi, et choix des noms des boutons.)
-Design et création de la barre de texte 
-Design et création du Titre, et animation: POKEMON dans le menu
-Création sons et musique (pas celle du menu)
-Création des animations des Pokemon, découpage en sprite pour fonctionnement sur pygame
-Création police d'écriture
-Choix des deux backgrounds (combat et menu)
-Choix et applications des positions et dimensions des éléments sur l'écran (position et dimensions: du texte, des boutons, des pokemons des barres de vies..., résolution de certains bug d'affichage aussi)
+- Design et Création des Pokemon
+-Design et création des barres de vies
+-Design et création de tous les boutons (versions survol aussi, et choix des noms des boutons.)
+-Design et création de la barre de texte 
+-Design et création du Titre, et animation: POKEMON dans le menu
+-Création sons et musique (pas celle du menu)
+-Création des animations des Pokemon, découpage en sprite pour fonctionnement sur pygame
+-Création police d'écriture
+-Choix des deux backgrounds (combat et menu)
+-Choix et applications des positions et dimensions des éléments sur l'écran (position et dimensions: du texte, des boutons, des pokemons des barres de vies..., résolution de certains bug d'affichage aussi)
 Code:
-Création du système de menu et sous-programme
-Création du système du sac (avec un bug corrigé par William, le sac ne s'ouvrait que lorsque la souris restait appuyée sur le bouton)
-Création du système de texte dynamique (ex: le nombre de vies qui descendent et le nombre de potions qui baissent)
+-Création du système de menu et sous-programme
+-Création du système du sac (avec un bug corrigé par William, le sac ne s'ouvrait que lorsque la souris restait appuyée sur le bouton)
+-Création du système de texte dynamique (ex: le nombre de vies qui descendent et le nombre de potions qui baissent)
 En Cours:
-Recherche approfondie et nombreux essais de création et affichage de map pour notre jeu (design et création de la map déjà réalisé, en revanche probleme d'affichage.)
+-Recherche approfondie et nombreux essais de création et affichage de map pour notre jeu (design et création de la map déjà réalisé, en revanche probleme d'affichage.)
 
 
 
 
 Fait en commun:
 
-Les Pokemon s'en vont lorsqu'ils perdent
-Choix du nombre de vies et valeurs des attaques
-Création d'une toute première fenetre fonctionnelle (au tout début du projet)
-Système de souris
+-Les Pokemon s'en vont lorsqu'ils perdent
+-Choix du nombre de vies et valeurs des attaques
+-Création d'une toute première fenetre fonctionnelle (au tout début du projet)
+-Système de souris
 
 
 
