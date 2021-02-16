@@ -6,13 +6,13 @@
 William:
 
 Code:
--Création système fondamental du jeu: système affichage, attaque et tours
--Création système des vies (fonctions et variables)
--Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)
--Création du système de tours (maitrise du temps sur pygame)
--Création du système des potions
--Création mouvement des pokemon lors des attaques
--Résolution de nombreux bugs
+-Création système fondamental du jeu: système affichage, attaque et tours  
+-Création système des vies (fonctions et variables)  
+-Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)  
+-Création du système de tours (maitrise du temps sur pygame)  
+-Création du système des potions  
+-Création mouvement des pokemon lors des attaques  
+-Résolution de nombreux bugs  
 
 
 
