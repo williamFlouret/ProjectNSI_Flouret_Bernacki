@@ -1,4 +1,58 @@
 # ProjectNSI_Flouret_Bernacki
+16 Février
+
+
+
+William:
+Code:
+Création système fondamental du jeu: système affichage, attaque et tours
+Création système des vies (fonctions et variables)
+Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)
+Création du système de tours (maitrise du temps sur pygame)
+Création du système des potions
+Création mouvement des pokemon lors des attaques
+Résolution de nombreux bugs
+
+
+
+
+
+Luc:
+
+Design:
+Design et Création des Pokemon
+Design et création des barres de vies
+Design et création de tous les boutons (versions survol aussi, et choix des noms des boutons.)
+Design et création de la barre de texte 
+Design et création du Titre, et animation: POKEMON dans le menu
+Création sons et musique (pas celle du menu)
+Création des animations des Pokemon, découpage en sprite pour fonctionnement sur pygame
+Création police d'écriture
+Choix des deux backgrounds (combat et menu)
+Choix et applications des positions et dimensions des éléments sur l'écran (position et dimensions: du texte, des boutons, des pokemons des barres de vies..., résolution de certains bug d'affichage aussi)
+Code:
+Création du système de menu et sous-programme
+Création du système du sac (avec un bug corrigé par William, le sac ne s'ouvrait que lorsque la souris restait appuyée sur le bouton)
+Création du système de texte dynamique (ex: le nombre de vies qui descendent et le nombre de potions qui baissent)
+En Cours:
+Recherche approfondie et nombreux essais de création et affichage de map pour notre jeu (design et création de la map déjà réalisé, en revanche probleme d'affichage.)
+
+
+
+
+Fait en commun:
+
+Les Pokemon s'en vont lorsqu'ils perdent
+Choix du nombre de vies et valeurs des attaques
+Création d'une toute première fenetre fonctionnelle (au tout début du projet)
+Système de souris
+
+
+
+
+
+
+
 
 MISE A JOUR: La version du projet le plus récente se trouve dans le dossier Poke v luc recente, dans lequel il faut lancer le programme Menu accueil (pour avoir une version avec le menu principal), sinon on peut directement lancer VersionBonSac, sans menu. Concernant notre avancement, nous en sommes aux trois quart et plus, de notre interface graphique. Encore quelques éléments, et elle sera tout à fait complète. Luc, a créé la musique et les sons du combat, et a redisgné les boutons (un nouveau bouton sac est aussi présent, mais ne fonctionne pas encore très bien). William a aussi rajouté la possibilité que le pokemon ennemi fasse une attque plus puissante, mais qu'il est une chance de la rater, comme le pokemon allié peut le faire. De manière plus générale, l'interface est beaucoup plus propre, et les vrais graphismes sont présents (à part les vrais barres de vie). Nous allons de ce pas nous lancer dans le mapping d'une carte en parallèle du fignolage de notre interface graphique. Si toute fois, cette "map" ce révélait infructueuse pour quelque raison que ce soit, notre interface graphique de combat sera à la hauteur des attentes des fins de projet, d'ici la fin du temps imparti. Nous sommes toutefois convaincu que tout reste possible, puisque nous n'en sommes qu'à la moitié de ce temps imparti. En ce qui concerne le "background"du jeu, nous pensons qu'il n'est pas indispensable, et nous prévoyons de ne pas y passer de temps, pour entièrement nous concentrer sur le mapping.
 
