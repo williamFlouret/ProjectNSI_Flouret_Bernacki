@@ -10,9 +10,9 @@ Code:
 -Création système des vies (fonctions et variables)  
 -Création du système d'animation des pokemons(code permettant de passer d'une image à l'autre)  
 -Création du système de tours (maitrise du temps sur pygame)  
--Création du système des potions  
+-Création du système des potions, allié et ennemi 
 -Création mouvement des pokemon lors des attaques  
--Résolution de nombreux bugs  
+-Résolution de nombreux bugs
 
 
 
@@ -55,7 +55,7 @@ Fait en commun:
 
 
 
-MISE A JOUR: La version du projet le plus récente se trouve dans le dossier Poke v luc recente, dans lequel il faut lancer le programme Menu accueil (pour avoir une version avec le menu principal), sinon on peut directement lancer VersionBonSac, sans menu. Concernant notre avancement, nous en sommes aux trois quart et plus, de notre interface graphique. Encore quelques éléments, et elle sera tout à fait complète. Luc, a créé la musique et les sons du combat, et a redisgné les boutons (un nouveau bouton sac est aussi présent, mais ne fonctionne pas encore très bien). William a aussi rajouté la possibilité que le pokemon ennemi fasse une attque plus puissante, mais qu'il est une chance de la rater, comme le pokemon allié peut le faire. De manière plus générale, l'interface est beaucoup plus propre, et les vrais graphismes sont présents (à part les vrais barres de vie). Nous allons de ce pas nous lancer dans le mapping d'une carte en parallèle du fignolage de notre interface graphique. Si toute fois, cette "map" ce révélait infructueuse pour quelque raison que ce soit, notre interface graphique de combat sera à la hauteur des attentes des fins de projet, d'ici la fin du temps imparti. Nous sommes toutefois convaincu que tout reste possible, puisque nous n'en sommes qu'à la moitié de ce temps imparti. En ce qui concerne le "background"du jeu, nous pensons qu'il n'est pas indispensable, et nous prévoyons de ne pas y passer de temps, pour entièrement nous concentrer sur le mapping.
+MISE A JOUR: La version du projet le plus récente se trouve dans le dossier Poke v luc recente, dans lequel il faut lancer le programme Menu accueil (pour avoir une version avec le menu principal), sinon on peut directement lancer VersionBonSac, sans menu. Concernant notre avancement, nous en sommes aux trois quart et plus, de notre interface graphique. Encore quelques éléments, et elle sera tout à fait complète. Luc, a créé la musique et les sons du combat, et a redisgné les boutons. William a aussi rajouté la possibilité que le pokemon ennemi fasse une attque plus puissante, mais qu'il est une chance de la rater, comme le pokemon allié peut le faire. Le pokemon ennemi peut aussi se soigner 2 fois lors d'un combar s'il n'a plus beaucoup de points de vie. De manière plus générale, l'interface est beaucoup plus propre, et les vrais graphismes sont présents (à part le vrai pokemon ennemi, qui sera dessiné par Luc). Nous allons de ce pas nous lancer dans le mapping d'une carte en parallèle du fignolage de notre interface graphique. Si toute fois, cette "map" ce révélait infructueuse pour quelque raison que ce soit, notre interface graphique de combat sera à la hauteur des attentes des fins de projet, d'ici la fin du temps imparti. Nous sommes toutefois convaincu que tout reste possible. En ce qui concerne le "background"du jeu, nous pensons qu'il n'est pas indispensable, et nous prévoyons de ne pas y passer de temps, pour entièrement nous concentrer sur le mapping.
 
 
 
