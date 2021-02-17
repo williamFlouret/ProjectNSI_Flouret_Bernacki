@@ -59,11 +59,14 @@ MISE A JOUR: La version du projet le plus récente se trouve dans le dossier Pok
 
 
 
-Voici notre projet, il faut pygame, tous les png et les fichiers son (.wav) pour l'executer. Ne pouvant pas mettre plus de 100 fichiers dans un dossier github, les fichierts sont separés. Il faut aller chercher des images dans le fichier animation, et le reste est dans la version luc v recente. De meme, manque de place, il faut aller chercher les png nommés "tile-000", "tile-001" et ainsi de suite dans la version son et musique. Normalement il devrait tout y avoir une fois cela fait. Nous corrigerons ces defauts de place et de dossiers :)
+Voici notre projet, il faut pygame, tous les png et les fichiers son (.wav) pour l'executer.
+Nous avons utilisé le module pygame, subprocess, os, sys et random.
+Les animations des pokemons sont faites grace a des classes rajoutées dans un groupe "all_sprites", de cette facon il suffit de constamment mettre a jour le groupe et l'afficher et tous les pokemons se mettent a bouger a l'ecran.
+Dans la boucle principale du jeu, qui dure aussi longtemps que la fenetre est ouverte, c'est a dire que le programme tourne, se trouve toutes les possibilités d'attaques, les systemes qui affichent les boutons ou pas, bref, toute la partie technique du projet. En dehors de cette boucle on va trouver la création de toutes les fonctions utilisées, les classes de sprite, la creation de toutes les variables, et l'importation des toutes les images en png.
 Le but final est d'avoir un jeu type pokemon en 2D, avec un personnage qui se deplace sur une carte et une interface de combat ou il peut affronter des creatures par un systeme de tour par tour.
 Pour le moment, nous n'avons qu'une interface de combat. Il y a un background et des sprites animés ainsi qu'une barre de vie modifiée au click d'un bouton (les sprites sont notres, dessinés par Luc l'artiste). Plusieurs attaques sont disponibles, chacune avec des caracteristiques differentes. Un prototype de sac pour recuperer des objets est en cours dans la version "VersionBonSac". Vous pouvez accedez a un trello pour voir notre avancement et plus de details.
 
-Luc se concentre sur les graphismes et la musique, il a aussi commencé le systeme de sac. Tandis que William s'occupe d'ajouter de nouvelles fonctionnalités au combat (comme affichage de texte, nouvelles attaques et animations)
+Luc se concentre sur les graphismes et la musique, qui sont presque tous finis! Tandis que William s'occupe d'ajouter de nouvelles fonctionnalités au combat (comme affichage de texte, nouvelles attaques et animations, potions, attaques qui permettent au pokemon de se defendre, etc...)
 
 Nous avons divisé notre projet en 4 parties,toutes très longues et imposantes, dans l'ordre chronologique où nous les réaliserons (Si nous avons le temps bien sûr):
 
@@ -75,7 +78,6 @@ Nous avons divisé notre projet en 4 parties,toutes très longues et imposantes,
 
 4-La création de l'histoire, du background de notre jeu (Vraiment à la fin fin si nous avons le temps) Cette etape risque d'etre abandonnée pour faute de temps.
 
-Nous situons pour l'instant vers la fin de la realisation de l'interface de combat, un peu moins loin si nous voulons vraiment qu'elle soit réussie.
-Lorsque nous l'auront terminée, nous commencerons à nous intéresser à la création de la carte, et ainsi de suite...
+Nous situons pour l'instant vers la fin de la realisation de l'interface de combat, un peu moins loin si nous voulons vraiment qu'elle soit réussie. Luc se penche sur la carte, il y rencontre quelques soucis mais bientot elle devrait etre fonctionnelle, on se concentrera donc tous les deux bientot sur le deplacement du personnage et les liens a faire avec l'inetrface de combat.
 
-Lien vers le Trello: https://trello.com/b/D7J5lvRh/pokémon-fan-game-👍
+Lien vers le Trello: https://trello.com/b/D7J5lvRh/pok%C3%A9mon-fan-game-%F0%9F%91%8D (le trello n'est plus trop utilisé, les infos dessus sont donc surement obsoletes).
