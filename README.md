@@ -2,19 +2,9 @@
 1 Mars
 
 poke v luc récente obsolète
-Il faut désormais lancer Menu_accueilNew.py ou Pokemon_Interface_GénésisTrue.py dans le dossier PokemonCombat; en effet, j'ai créé une animation de début de combat
+Il faut désormais lancer Menu_accueilNew.py dans le dossier PokemonCombat; en effet, j'ai créé une animation de début de combat
 qui m'a pris énormément de temps, j'ai réalisé toutes les nouvelles animations, et sprites, j'ai changé la musique, et j'en ai rajouté une lorsque l'on gagne.
-(2 légers soucis: cette amélioration du programme s'accompagne de vraiment beaucoup de nouveaux objets sur la fenêtre, des images et animations. Pour réaliser une suite d'action qui se suivent toutes seules, j'ai du créer aussi beaucoup d'évènements, et donc beaucoup de nouveau booléens, pour une raison qui m'est inconnue, lorsque l'on peut finalement combattre, les actions sont plus lentes, l'ennemi met plus de temps à attaquer; en soit ce n'est pas un problème puisque le combat est seulement un petit peu ralenti, mais j'aimerais comprendre pourquoi. 2ème petit soucis: la nouvelle musique (qui avouons-le est meilleure que la précédente) couvre beaucoup plus les autres sons (attaques etc...) que la précédente musique et je ne sais pas pourquoi non-plus. Tous les fichiers sont maintentant dans PokemonCombat. En raison d'un nombre maximum de fichiers uploadés en une seule fois, j'ai du uploader les fichiers en plusieurs fois, il faut donc aussi impérativement prendre les fichiers de PokemonCombat1 et PokemonCombat2 aussi, situés dans PokemonCombat.
-En second temps, j'ai rajouté une section Mapping pour que vous puissiez nous éclairer sur ce qui ne vas pas pour la Map. En l'état pour moi, aucun des deux programmes ne fonctionnent: JeuMap.py et JeuMap copie.py, ils affichent tout deux en erreur: Unsupported image format (erreur assez étonnante puisque les deux programmes sont conçus en partie pour  que le .tmx puisse être supporté, et d'une autre partie pour qu'il puisse être affiché.) De plus, après avoir sondé internet, la façon dont j'ai codé les deux programmes (les deux programmes font la même chose mais j'ai essayé deux manières différentes) est censé être la bonne. Un point important est qu'il semble que l'erreur vienne d'un programme lancé par le module .pytmx, et non pas mon programme, j'ai pu l'observer mais je ne vois pas comment résoudre l'erreur. J'éspère chez vous que vous puissiez ouvrir les programmes lancés par des modules car cela s'avère très utile pour moi, pour comprendre la source des erreurs. P.S: il faut installer le module pytmx, et mettre sa version de python à 3.7; car 3.9 ne supporte visiblement pas .pytmx
-
-
-
-
-
-
-
-
-
+(léger souci: cette amélioration du programme s'accompagne de vraiment beaucoup de nouveaux objets sur la fenêtre, des images et animations. Pour réaliser une suite d'action qui se suivent toutes seules, j'ai du créer aussi beaucoup d'évènements, et donc beaucoup de nouveau booléens). Tous les fichiers sont maintentant dans PokemonCombat. Le probleme de taille et de nombre de fichier maximum a été réglé.
 
 
 16 Février
@@ -31,8 +21,10 @@ Code:
 -Création du système des potions, allié et ennemi 
 -Création mouvement des pokemon lors des attaques  
 -Résolution de nombreux bugs
-
-
+-Depot des fichiers volumineux (>25Mb) dans le Github à l'aide de Git Bash.
+-Correction du deplacement du personnage et des transitions de partie de map --> plus fluides
+-Course du personnage
+-Systeme d'obstacles (un peu lourd mais fonctionnel)
 
 
 
@@ -53,8 +45,8 @@ Code:
 -Création du système de menu et sous-programme  
 -Création du système du sac (avec un bug corrigé par William, le sac ne s'ouvrait que lorsque la souris restait appuyée sur le bouton)  
 -Création du système de texte dynamique (ex: le nombre de vies qui descendent et le nombre de potions qui baissent)  
-En Cours:
--Recherche approfondie et nombreux essais de création et affichage de map pour notre jeu (design et création de la map déjà réalisé, en revanche probleme d'affichage.)  
+-Design de la Map et du personnage
+-Systeme de deplacement du personnage et ses animations
 
 
 
@@ -64,7 +56,8 @@ Fait en commun:
 -Les Pokemon s'en vont lorsqu'ils perdent  
 -Choix du nombre de vies et valeurs des attaques  
 -Création d'une toute première fenetre fonctionnelle (au tout début du projet)  
--Système de souris  
+-Système de souris
+-Ajout des nombreuses collisions de la Map
 
 
 
