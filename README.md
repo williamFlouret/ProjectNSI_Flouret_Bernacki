@@ -1,6 +1,6 @@
 # ProjectNSI_Flouret_Bernacki
 
-AFIN DE JOUER AU JEU: telecharger tous les fichiers en zip à l'aide du gros bouton vert "code", extraire les fichiers et lancer Menu_accueilNew.py. Veuillez installer avec un pip install les modules requis (pygame, sys, random) et vous assurer que tous les fichiers du jeu sont bien dans le meme repertoire. Si vous avez le launcher python vous pouvez directement double cliquer sur le fichier et le jeu se lancera, sinon, ouvrez le avec un editeur python comme PyZo et executez le programme. Bon jeu!
+AFIN DE JOUER AU JEU: telecharger tous les fichiers en zip à l'aide du gros bouton vert "code", extraire les fichiers et lancer Menu_accueilNew.py qui se trouve dans "Pokemon Combat". Veuillez installer avec un pip install les modules requis (pygame, sys, random) et vous assurer que tous les fichiers du jeu sont bien dans le meme repertoire. Si vous avez le launcher python vous pouvez directement double cliquer sur le fichier et le jeu se lancera, sinon, ouvrez le avec un editeur python comme PyZo et executez le programme. Bon jeu!
 
 
 Il faut désormais lancer Menu_accueilNew.py dans le dossier PokemonCombat; en effet, j'ai créé une animation de début de combat
